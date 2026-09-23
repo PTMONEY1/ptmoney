@@ -327,3 +327,82 @@ body.menu-open .pt-header--home .pt-header__toggle {
     margin-left: 0;
   }
 }
+
+/* ==========================================================================
+   FIX 2026-09-23 — hero, menu mobilne
+   ========================================================================== */
+
+/* Hero: każdy wers w osobnej linii, równo od lewej. Ujemny letter-spacing
+   wypychał ostatnią literę („e”) poza pole z overflow: hidden, więc była
+   ucinana — padding-right daje jej miejsce. */
+.hero-copy h1 .hero-line,
+.hero-copy h1 .hero-line--first,
+.hero-copy h1 .hero-line--second,
+.hero-copy h1 .hero-line--accent {
+  display: block;
+  margin-left: 0;
+  padding-right: .14em;
+}
+.hero-copy h1 .hero-line + .hero-line { margin-top: .04em; }
+
+/* Parallax przesuwa zdjęcie w górę do 46 px — zapas na dole, żeby spod
+   zdjęcia nie wychodził czarny pasek. */
+.hero-media img { height: calc(100% + 56px); }
+
+/* Na telefonie bez parallaxu: przy chowającym się pasku adresu dawał
+   drganie hero i czarny pas na dole. */
+@media (max-width: 899px) {
+  .hero-media img { height: 100%; transform: none !important; }
+  .hero { min-height: 100svh; }
+}
+
+/* Hamburger — większy, łatwiejszy do trafienia palcem. */
+@media (max-width: 899px) {
+  .pt-header__toggle {
+    width: 50px;
+    height: 50px;
+    padding: 0 13px;
+    gap: 6px;
+    border-radius: 14px;
+  }
+  .pt-header__toggle span { height: 2px; }
+  .pt-header__toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .pt-header__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+/* Numery telefonów w rozwijanym menu. */
+.pt-header__mobile-inner > a:nth-last-child(2) { border-bottom: 0; }
+.pt-header__mobile-phones {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 16px;
+  border-top: 1px solid #EFEFEF;
+}
+.pt-header__mobile .pt-header__mobile-phone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid #E2E2E2;
+  border-radius: 12px;
+  background: #F7F7F5;
+  color: #1D1D1D;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+.pt-header__mobile .pt-header__mobile-phone::before {
+  content: attr(data-label);
+  color: #6B6B6B;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.pt-header__mobile .pt-header__mobile-phone:first-child {
+  background: #2F3FFF;
+  border-color: #2F3FFF;
+  color: #fff;
+}
+.pt-header__mobile .pt-header__mobile-phone:first-child::before { color: rgba(255,255,255,.78); }

@@ -87,7 +87,7 @@
   }
 
   /* Portret dryfuje wolniej niż strona, gdy hero odjeżdża w górę. */
-  if (hero && heroParallax.length && !reduceMotion) {
+  if (hero && heroParallax.length && !reduceMotion && window.matchMedia('(min-width: 900px)').matches) {
     let parallaxTicking = false;
     const renderParallax = () => {
       parallaxTicking = false;

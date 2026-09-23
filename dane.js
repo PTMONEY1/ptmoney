@@ -33,7 +33,7 @@ window.PTM_DANE = {
      Pełny adres z ukośnikiem na końcu. Trafia do canonical, Open Graph
      i danych dla Google. Po podpięciu własnej domeny podmień tutaj
      ORAZ w sitemap.xml i robots.txt (oba to zwykłe pliki tekstowe).         */
-  adresStrony: 'https://jakubskrzypiec.github.io/ptmoney/',
+  adresStrony: 'https://ptmoney.pl/',
 
   /* --- Odbiór formularza ----------------------------------------------------
      Dokąd mają trafiać zgłoszenia. Puste = formularz tylko pokazuje
