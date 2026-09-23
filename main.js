@@ -614,7 +614,15 @@
   const optionalDetails = $('#optionalDetails');
 
   function phoneDigits(value) {
-    let digits = String(value || '').replace(/\D/g, '');
+    /* Formatter sam dopisuje „+48 ”, więc przy kolejnym znaku ten prefiks
+       wracał tu jako zwykłe cyfry i doklejał się do numeru. Zdejmujemy go
+       tylko wtedy, gdy jest zapisany jako prefiks kraju (+48 albo 0048) —
+       inaczej numer stacjonarny zaczynający się od 48 (Radom) gubiłby
+       dwie pierwsze cyfry. */
+    const reszta = String(value || '').trim()
+      .replace(/^\+\s*48/, '')
+      .replace(/^00\s*48/, '');
+    let digits = reszta.replace(/\D/g, '');
     if (digits.startsWith('48') && digits.length > 9) digits = digits.slice(2);
     return digits.slice(0, 9);
   }

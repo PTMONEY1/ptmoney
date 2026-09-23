@@ -406,3 +406,45 @@ body.menu-open .pt-header--home .pt-header__toggle {
   color: #fff;
 }
 .pt-header__mobile .pt-header__mobile-phone:first-child::before { color: rgba(255,255,255,.78); }
+
+/* ---------- Wyrównanie paska nawigacji ----------
+   Było: flex ze space-between — menu lądowało tam, gdzie wypadło po
+   zsumowaniu szerokości logo i prawej kolumny, więc nigdy nie stało
+   na środku. Jest: siatka 1fr / auto / 1fr, czyli środkowa kolumna
+   zawsze siedzi dokładnie na osi strony, niezależnie od tego, jak
+   szerokie jest logo i ile numerów wyświetla się po prawej. */
+.pt-header__inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  max-width: 1760px;
+}
+
+/* Kolumny przypisane na sztywno. Poniżej 900 px menu ma display:none,
+   więc znika z siatki — bez tego prawa kolumna wskakiwała na miejsce
+   menu i hamburger nie dochodził do krawędzi. */
+.pt-header__brand {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.pt-header__nav {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.pt-header__actions {
+  grid-column: 3;
+  justify-self: end;
+}
+
+/* Przy węższych ekranach dwa numery plus przycisk nie mieszczą się obok
+   wyśrodkowanego menu — prawa kolumna dociskała je w lewo. Numery
+   pokazujemy więc dopiero od 1400 px; niżej zostaje samo menu i CTA,
+   a w razie potrzeby telefony są w stopce i w sekcji kontaktowej. */
+@media (max-width: 1399px) {
+  .pt-header__phone { display: none; }
+}
+@media (min-width: 1400px) {
+  .pt-header__phone { display: inline-flex; }
+}
