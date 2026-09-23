@@ -1,0 +1,329 @@
+/* P&T Money — jeden wspólny header dla Start / Oferta / Kalkulator / Kontakt.
+   Plik jest ładowany jako ostatni, dlatego CSS poszczególnych podstron nie może
+   już zmienić szerokości, fontu ani położenia paska. */
+.pt-header,
+.pt-header * { box-sizing: border-box; }
+
+.pt-header {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  min-height: 80px;
+  background: rgba(255,255,255,.94);
+  -webkit-backdrop-filter: saturate(135%) blur(16px);
+  backdrop-filter: saturate(135%) blur(16px);
+  border-bottom: 1px solid transparent;
+  color: #1D1D1D;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.62;
+}
+
+.pt-header__inner {
+  width: 100%;
+  max-width: 1480px;
+  min-height: 80px;
+  margin-inline: auto;
+  padding-inline: clamp(22px, 5vw, 72px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pt-header__brand {
+  display: block;
+  flex: 0 0 auto;
+  line-height: 0;
+  text-decoration: none;
+}
+.pt-header__brand img {
+  display: block;
+  width: auto;
+  height: 30px;
+  max-width: none;
+}
+
+.pt-header__nav {
+  display: none;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.pt-header__nav a {
+  position: relative;
+  display: block;
+  padding: 6px 0;
+  color: #1D1D1D;
+  font-family: inherit;
+  font-size: 15.84px;
+  font-weight: 500;
+  line-height: 1.62;
+  letter-spacing: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.pt-header__nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transition: right .25s ease;
+}
+.pt-header__nav a:hover { color: #090909; }
+.pt-header__nav a:hover::after { right: 0; }
+.pt-header__nav a[aria-current="page"] { color: #2F3FFF; }
+.pt-header__nav a[aria-current="page"]::after { right: 0; }
+
+.pt-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 0 0 auto;
+}
+.pt-header__phone {
+  display: none;
+  color: #1D1D1D;
+  font-family: inherit;
+  font-size: 14.6px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s ease, opacity .2s ease;
+}
+.pt-header__phone::before,
+.pt-header__phone::after {
+  content: none !important;
+  display: none !important;
+}
+.pt-header__phone--person {
+  margin-left: 2px;
+  padding-left: 14px;
+  border-left: 1px solid rgba(29,29,29,.18);
+}
+.pt-header__phone:hover { color: #2F3FFF; }
+
+.pt-header__cta {
+  display: none;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 18px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: #2F3FFF;
+  color: #fff;
+  font-family: inherit;
+  font-size: 15.3px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.pt-header__cta:hover { background: #202DDB; }
+
+.pt-header__toggle {
+  width: 42px;
+  height: 42px;
+  padding: 0 11px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #E2E2E2;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+}
+.pt-header__toggle span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: #090909;
+  transition: transform .22s ease, opacity .22s ease;
+}
+.pt-header__toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.pt-header__toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.pt-header__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.pt-header__mobile {
+  background: #fff;
+  border-top: 1px solid #E2E2E2;
+}
+.pt-header__mobile-inner {
+  width: 100%;
+  max-width: 1480px;
+  margin-inline: auto;
+  padding: 8px clamp(22px, 5vw, 72px) 20px;
+  display: flex;
+  flex-direction: column;
+}
+.pt-header__mobile a {
+  padding: 14px 2px;
+  border-bottom: 1px solid #EFEFEF;
+  color: #1D1D1D;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+}
+.pt-header__mobile a[aria-current="page"] { color: #2F3FFF; }
+.pt-header__mobile a:last-child { border-bottom: 0; }
+
+@media (min-width: 900px) {
+  .pt-header__nav { display: flex; }
+  .pt-header__cta { display: inline-flex; }
+  .pt-header__toggle { display: none; }
+  .pt-header__mobile { display: none !important; }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .pt-header__nav { gap: 22px; }
+}
+@media (min-width: 1200px) {
+  .pt-header__phone { display: inline-flex; }
+}
+@media (min-width: 1200px) and (max-width: 1379px) {
+  .pt-header__actions { gap: 11px; }
+  .pt-header__phone { font-size: 13.6px; }
+  .pt-header__phone--person { padding-left: 12px; }
+  .pt-header__cta { padding-inline: 15px; }
+}
+
+/* --------------------------------------------------------------------------
+   START — transparentny header na hero, tak jak w pierwotnej wersji.
+   Po przewinięciu zachowuje dokładnie ten sam biały pasek co podstrony.
+   -------------------------------------------------------------------------- */
+.pt-header--home {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-bottom-color: transparent;
+  box-shadow: none;
+  transition:
+    opacity .42s ease,
+    background-color .28s ease,
+    border-color .28s ease,
+    box-shadow .28s ease,
+    backdrop-filter .28s ease;
+}
+
+.js-intro .pt-header--home {
+  opacity: 0 !important;
+  visibility: hidden;
+  pointer-events: none !important;
+}
+
+.pt-header--home.is-compact {
+  background: rgba(255,255,255,.94);
+  -webkit-backdrop-filter: saturate(135%) blur(16px);
+  backdrop-filter: saturate(135%) blur(16px);
+  border-bottom-color: rgba(226,226,226,.82);
+  box-shadow: 0 10px 34px rgba(9,27,39,.055);
+}
+
+.pt-header__brand--home {
+  position: relative;
+}
+.pt-header__brand--home .pt-header__logo {
+  display: block;
+  width: auto;
+  height: 30px;
+  transition: opacity .25s ease;
+}
+.pt-header__brand--home .pt-header__logo--light {
+  position: absolute;
+  inset: 0 auto auto 0;
+  opacity: 1;
+}
+.pt-header__brand--home .pt-header__logo--dark {
+  opacity: 0;
+}
+.pt-header--home.is-compact .pt-header__logo--light,
+body.menu-open .pt-header--home .pt-header__logo--light {
+  opacity: 0;
+}
+.pt-header--home.is-compact .pt-header__logo--dark,
+body.menu-open .pt-header--home .pt-header__logo--dark {
+  opacity: 1;
+}
+
+.pt-header--home:not(.is-compact) .pt-header__nav a,
+.pt-header--home:not(.is-compact) .pt-header__phone {
+  color: rgba(255,255,255,.92);
+}
+.pt-header--home:not(.is-compact) .pt-header__nav a:hover,
+.pt-header--home:not(.is-compact) .pt-header__phone:hover,
+.pt-header--home:not(.is-compact) .pt-header__nav a[aria-current="page"] {
+  color: #fff;
+}
+.pt-header--home:not(.is-compact) .pt-header__nav a::after {
+  background: currentColor;
+}
+.pt-header--home:not(.is-compact) .pt-header__phone--person {
+  border-left-color: rgba(255,255,255,.26);
+}
+.pt-header--home:not(.is-compact) .pt-header__cta {
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  border-color: rgba(255,255,255,.38);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+.pt-header--home:not(.is-compact) .pt-header__cta:hover {
+  background: #fff;
+  color: #1D1D1D;
+  border-color: #fff;
+}
+.pt-header--home:not(.is-compact) .pt-header__toggle {
+  background: rgba(255,255,255,.72);
+  border-color: rgba(255,255,255,.34);
+}
+.pt-header--home:not(.is-compact) .pt-header__toggle span {
+  background: #111;
+}
+
+body.menu-open .pt-header--home {
+  background: rgba(255,255,255,.98);
+  -webkit-backdrop-filter: saturate(135%) blur(16px);
+  backdrop-filter: saturate(135%) blur(16px);
+  border-bottom-color: #E2E2E2;
+}
+body.menu-open .pt-header--home .pt-header__nav a,
+body.menu-open .pt-header--home .pt-header__phone {
+  color: #1D1D1D;
+}
+body.menu-open .pt-header--home .pt-header__toggle {
+  background: #fff;
+  border-color: #E2E2E2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pt-header--home,
+  .pt-header__brand--home .pt-header__logo { transition: none; }
+}
+
+/* Mobile hero typography fix: align all lines and keep final glyphs clear of the edge. */
+@media (max-width: 899px) {
+  .hero-copy h1 {
+    max-width: none;
+    font-size: clamp(2.1rem, 10.3vw, 4.4rem);
+    line-height: 1;
+    padding-right: .08em;
+  }
+  .hero-copy h1 .hero-line--second {
+    margin-left: 0;
+  }
+}
