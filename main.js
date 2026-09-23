@@ -649,7 +649,7 @@
         // Sama treść oświadczenia — bez etykiety „opcjonalne” i gwiazdki.
         const kopia = tresc.cloneNode(true);
         kopia.querySelectorAll('.consent-opt, [aria-hidden="true"]').forEach(x => x.remove());
-        dane.set(`${pole.name}__tresc`, kopia.textContent.replace(/s+/g, ' ').trim());
+        dane.set(`${pole.name}__tresc`, kopia.textContent.replace(/\s+/g, ' ').trim());
       }
     });
     return dane;
@@ -685,6 +685,19 @@
     consentField.setAttribute('aria-invalid', 'false');
   });
 
+  /* Po wysyłce zostaje samo potwierdzenie — formularz znika, żeby nikt nie
+     wysłał zgłoszenia po raz drugi i żeby było jasne, że poszło. */
+  function pokazPodziekowanie() {
+    if (!form) return;
+    form.classList.add('is-sent');
+    if (success) {
+      success.hidden = false;
+      success.setAttribute('tabindex', '-1');
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      success.focus({ preventScroll: true });
+    }
+  }
+
   if (form) {
     form.addEventListener('submit', async event => {
       event.preventDefault();
@@ -701,7 +714,7 @@
       // Pole-pułapka wypełnia tylko automat. Udajemy sukces, żeby nie podpowiadać botowi,
       // że został rozpoznany, ale zgłoszenia nigdzie nie wysyłamy.
       if ($('#fCompany', form)?.value) {
-        if (success) success.hidden = false;
+        pokazPodziekowanie();
         form.reset();
         return;
       }
@@ -733,9 +746,11 @@
       }
 
       if (successText) {
-        successText.textContent = `Zgłoszenie przyjęte. Doradca oddzwoni w ciągu jednego dnia roboczego na numer ${submittedPhone}.`;
+        successText.textContent = submittedPhone
+          ? `Skontaktujemy się z Tobą najszybciej, jak to możliwe — zadzwonimy na numer ${submittedPhone}.`
+          : "Skontaktujemy się z Tobą najszybciej, jak to możliwe.";
       }
-      if (success) success.hidden = false;
+      pokazPodziekowanie();
       form.reset();
       if (optionalDetails) optionalDetails.open = false;
       $$('.field.is-invalid', form).forEach(field => field.classList.remove('is-invalid'));

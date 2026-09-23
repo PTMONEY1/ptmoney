@@ -83,7 +83,13 @@
 </div>
 <div class="subpage-form reveal">
 <div class="form-head"><p class="eyebrow">Formularz</p><h3>Poproś o kontakt</h3><p>Wypełnienie podstawowych pól zajmuje mniej niż minutę.</p></div>
-<form action="" data-endpoint="" id="leadForm" method="post" novalidate="">
+<form action="https://formsubmit.co/ajax/tomasz.kolodziej@int.pl" data-endpoint="https://formsubmit.co/ajax/tomasz.kolodziej@int.pl" id="leadForm" method="post" novalidate="">
+<!-- Odbiorcy zgloszen. Glowny adres: tomasz.kolodziej@int.pl (wymaga
+     jednorazowej aktywacji w FormSubmit). Kopie leca na pozostale dwa. -->
+<input type="hidden" name="_cc" value="paulina.marek01@gmail.com,biuro@ptmoney.pl">
+<input type="hidden" name="_subject" value="Nowe zgloszenie z formularza P&amp;T Money">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
 <p class="form-step">Zajmie mniej niż minutę</p>
 <div class="form-grid">
 <div class="form-primary">
@@ -187,7 +193,8 @@
 
 <div aria-live="polite" class="form-success" hidden="" id="formSuccess" role="status">
 <svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12 2.25 2.25L15.5 9.5"></path></svg>
-<span id="formSuccessText">Zgłoszenie przyjęte. Nasz zespół oddzwoni w ciągu jednego dnia roboczego.</span>
+<strong class="form-success-title">Dziękujemy za zgłoszenie</strong>
+<span class="form-success-text" id="formSuccessText">Skontaktujemy się z Tobą najszybciej, jak to możliwe.</span>
 </div>
 </form>
 </div>
