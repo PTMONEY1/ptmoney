@@ -13,7 +13,7 @@
 <meta content="Porównujemy oferty banków i instytucji finansowych. Zostaw kontakt — oddzwonimy w ciągu jednego dnia roboczego." property="og:description"/>
 <!-- Podgląd linku: zdjęcie hero, nie logo. Logo na białym tle daje w komunikatorach
      pustą, niczego nieznaczącą miniaturę. -->
-<meta content="https://jakubskrzypiec.github.io/ptmoney/img/hero.jpg" property="og:image"/>
+<meta content="https://jakubskrzypiec.github.io/ptmoney/hero.jpg" property="og:image"/>
 <meta content="1672" property="og:image:width"/>
 <meta content="941" property="og:image:height"/>
 <meta content="Biurko z laptopem i materiałami P&amp;T Money" property="og:image:alt"/>
@@ -21,10 +21,10 @@
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="P&amp;T Money | Pośrednictwo finansowe" name="twitter:title"/>
 <meta content="Kredyty, leasing i faktoring — cała Polska." name="twitter:description"/>
-<meta content="https://jakubskrzypiec.github.io/ptmoney/img/hero.jpg" name="twitter:image"/>
+<meta content="https://jakubskrzypiec.github.io/ptmoney/hero.jpg" name="twitter:image"/>
 <link href="https://jakubskrzypiec.github.io/ptmoney/" rel="canonical"/>
-<!-- Czcionki z własnego serwera, nie z Google — patrz fonts/fonts.css -->
-<link rel="stylesheet" href="./fonts/fonts.css?v=1">
+<!-- Czcionki z własnego serwera, nie z Google — patrz fonts.css -->
+<link rel="stylesheet" href="./fonts.css?v=1">
 <link href="./styles.css?v=20260916-2" rel="stylesheet"/>
 <link rel="stylesheet" href="./header-shared.css?v=20260917-1">
 <script>
@@ -49,7 +49,7 @@ document.documentElement.classList.add('js');
 }
 </script>
 <!-- Hero ładuje się od razu — bez preloadu wchodzi dopiero po CSS i widać pustą planszę. -->
-<link as="image" fetchpriority="high" href="./img/hero.jpg" rel="preload"/>
+<link as="image" fetchpriority="high" href="./hero.jpg" rel="preload"/>
 <link href="./favicon.png" rel="icon" sizes="128x128" type="image/png"/>
 <link href="./apple-touch-icon.png" rel="apple-touch-icon"/>
 <!-- dane.js musi być przed main.js: rozstawia dane klienta, zanim main.js je odczyta. -->
@@ -112,7 +112,7 @@ document.documentElement.classList.add('js');
        data-hero-in + data-delay ustalają kolejność wejścia po kurtynie marki. -->
 <section aria-labelledby="hero-title" class="hero" id="hero">
 <div aria-hidden="true" class="hero-media" data-delay="0.08" data-hero-wipe="">
-<img alt="" data-hero-parallax="" decoding="async" fetchpriority="high" height="941" loading="eager" src="./img/hero.jpg" width="1672"/>
+<img alt="" data-hero-parallax="" decoding="async" fetchpriority="high" height="941" loading="eager" src="./hero.jpg" width="1672"/>
 </div>
 <div aria-hidden="true" class="hero-shade"></div>
 <div class="container hero-main">
@@ -267,7 +267,7 @@ document.documentElement.classList.add('js');
 <div class="container advisor-grid">
 <div class="advisor-side reveal">
 <figure class="portrait portrait--advisor">
-<img alt="Zespół doradców P&amp;T Money" data-portrait="" decoding="async" height="1374" loading="lazy" src="./img/doradca-2.jpg" width="1099"/>
+<img alt="Zespół doradców P&amp;T Money" data-portrait="" decoding="async" height="1374" loading="lazy" src="./doradca-2.jpg" width="1099"/>
 <figcaption aria-hidden="true" class="portrait-fallback"><img alt="" height="707" src="./logo-mark.png" width="785"/><span>Zespół P&amp;T Money</span></figcaption>
 
 </figure>
