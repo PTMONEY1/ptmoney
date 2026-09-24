@@ -116,8 +116,15 @@ window.PTM_DANE = {
   const base = set(D.adresStrony);
   if (base) {
     const root = base.endsWith('/') ? base : `${base}/`;
-    const page = window.location.pathname.split('/').pop() || '';
-    const here = page && page !== 'index.html' ? root + page : root;
+    /* Adresy są czyste (/oferta/), więc bierzemy całą ścieżkę, a nie ostatni
+       jej człon — ten przy adresie zakończonym ukośnikiem jest pusty i każda
+       podstrona dostawała kanoniczny adres strony głównej. */
+    const sciezka = window.location.pathname
+      .replace(/index\.html$/, '')
+      .replace(/^\/+/, '');
+    const here = sciezka
+      ? root + (sciezka.endsWith('/') ? sciezka : sciezka + '/')
+      : root;
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) canonical.href = here;
     const ogUrl = document.querySelector('meta[property="og:url"]');
