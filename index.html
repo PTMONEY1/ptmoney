@@ -25,8 +25,8 @@
 <link href="https://ptmoney.pl/" rel="canonical"/>
 <!-- Czcionki z własnego serwera, nie z Google — patrz fonts.css -->
 <link rel="stylesheet" href="./fonts.css?v=1">
-<link href="./styles.css?v=20260923-3" rel="stylesheet"/>
-<link rel="stylesheet" href="./header-shared.css?v=20260923-3">
+<link href="./styles.css?v=20260924-2" rel="stylesheet"/>
+<link rel="stylesheet" href="./header-shared.css?v=20260924-2">
 <script>
 document.documentElement.classList.add('js');
 (() => {
@@ -54,7 +54,7 @@ document.documentElement.classList.add('js');
 <link href="./apple-touch-icon.png" rel="apple-touch-icon"/>
 <!-- dane.js musi być przed main.js: rozstawia dane klienta, zanim main.js je odczyta. -->
 <script defer="" src="./dane.js?v=20260923-1"></script>
-<script defer="" src="./main.js?v=20260923-3"></script>
+<script defer="" src="./main.js?v=20260924-2"></script>
 </head>
 <body>
 <!-- ============ INTRO: krótka, automatyczna kurtyna marki ============ -->
@@ -542,34 +542,34 @@ document.documentElement.classList.add('js');
 <label for="fCompany">Nie wypełniaj tego pola</label>
 <input autocomplete="off" id="fCompany" name="company" tabindex="-1" type="text"/>
 </div>
-<!-- Wariant rekomendowany z klauzula-i-zgody-formularz.md: obowiązek informacyjny
-     oddzielony od zgód marketingowych. Jeden wymagany checkbox obejmujący także
-     marketing oznaczałby, że zgoda marketingowa jest warunkiem usługi, czyli
-     nie jest swobodna. -->
+<!-- Zgoda wymagana łączy potwierdzenie polityki z kontaktem telefonicznym
+     i mailowym W SPRAWIE TEGO ZAPYTANIA — dzwonienie do kogoś, kto sam
+     poprosił o kontakt, to realizacja jego prośby, nie marketing, więc
+     może stać w jednym wymaganym checkboxie.
+     Osobno i dobrowolnie zostaje marketing, czyli oferty wysyłane PÓŹNIEJ,
+     poza tym zapytaniem. Gdyby i to wpadło do wymaganego pola, zgoda
+     marketingowa stałaby się warunkiem usługi, czyli przestałaby być
+     swobodna (art. 4 pkt 11 i art. 7 ust. 4 RODO). -->
 <div class="consent-wrap">
 <label class="consent" for="fConsent">
 <input aria-describedby="fConsentError" id="fConsent" name="zgoda_polityka" required type="checkbox">
-<span>Potwierdzam, że zapoznałem/-am się z <a href="./polityka-prywatnosci.html">Polityką prywatności</a>. Rozumiem, że moje dane będą przetwarzane w celu obsługi zapytania i przygotowania oferty finansowania oraz mogą zostać przekazane współpracującym ekspertom, pośrednikom i instytucjom finansowym w celu przedstawienia mi oferty. <span aria-hidden="true">*</span></span>
+<span>Potwierdzam, że zapoznałem/-am się z <a href="./polityka-prywatnosci.html">Polityką prywatności</a> i wyrażam zgodę na kontakt telefoniczny oraz e-mailowy pod podanymi danymi w celu obsługi tego zapytania i przedstawienia oferty finansowania. Rozumiem, że moje dane mogą zostać przekazane współpracującym ekspertom, pośrednikom i instytucjom finansowym w tym celu. <span aria-hidden="true">*</span></span>
 </label>
 <p class="field-error" id="fConsentError">Zaznacz potwierdzenie, aby wysłać formularz.</p>
 </div>
 
-<!-- Zgody opcjonalne — poza .consent-wrap, żeby walidacja ich nie blokowała.
-     Niezaznaczone domyślnie, do wycofania w każdej chwili. -->
+<!-- Zgoda marketingowa — poza .consent-wrap, żeby walidacja jej nie blokowała.
+     Niezaznaczona domyślnie, do wycofania w każdej chwili. -->
 <ul class="consent-optional">
-<li><label class="consent" for="fConsentTel">
-<input id="fConsentTel" name="zgoda_telefon" type="checkbox">
-<span>Wyrażam zgodę na kontakt telefoniczny pod podanym numerem w celu przedstawienia informacji i ofert produktów finansowych. <span class="consent-opt">opcjonalne</span></span>
-</label></li>
-<li><label class="consent" for="fConsentMail">
-<input id="fConsentMail" name="zgoda_elektroniczna" type="checkbox">
-<span>Wyrażam zgodę na otrzymywanie informacji handlowych drogą elektroniczną (e-mail, SMS) na podane dane kontaktowe. <span class="consent-opt">opcjonalne</span></span>
+<li><label class="consent" for="fConsentMarketing">
+<input id="fConsentMarketing" name="zgoda_marketing" type="checkbox">
+<span>Wyrażam zgodę na otrzymywanie od P&amp;T Money informacji handlowych i ofert produktów finansowych telefonicznie, e-mailem lub SMS-em również po zakończeniu obsługi tego zapytania. <span class="consent-opt">opcjonalne</span></span>
 </label></li>
 </ul>
 
 <!-- Dowód zgody (art. 5 ust. 2 RODO): wersja dokumentów i moment wysyłki jadą
      razem ze zgłoszeniem. Adresu IP przeglądarka nie zna — dopisuje go odbiorca. -->
-<input type="hidden" name="wersja_dokumentow" value="Polityka prywatności 1.0 / Regulamin 1.0 z 6.09.2026">
+<input type="hidden" name="wersja_dokumentow" value="Polityka prywatności 1.0 / Regulamin 1.0 z 6.09.2026 / Zgody 2.0 z 24.09.2026">
 <input type="hidden" name="wyslano_o" id="fWyslanoO" value="">
 
 <button class="btn btn--primary btn--submit" type="submit"><span>Poproś o kontakt</span><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M5 12h13M12 6l6 6-6 6"></path></svg></button>
@@ -579,7 +579,7 @@ document.documentElement.classList.add('js');
 <details class="rodo-klauzula">
 <summary>Informacja o przetwarzaniu danych osobowych</summary>
 <div class="rodo-klauzula-tresc">
-<p><strong>Administrator.</strong> MARTOM POLSKA Sp. z o.o., ul. Walerego Sławka 5/16, 40-833 Katowice, KRS 0000584084, NIP 6342849173, wpisana do Rejestru Pośredników Kredytowych KNF jako pośrednik kredytu konsumenckiego (nr RPK027234), działająca pod marką P&amp;T Money. Kontakt: <a href="mailto:kontakt@ptmoney.pl">kontakt@ptmoney.pl</a>.</p>
+<p><strong>Administrator.</strong> MARTOM POLSKA Sp. z o.o., ul. Walerego Sławka 5/16, 40-833 Katowice, KRS 0000584084, NIP 6342849173, wpisana do Rejestru Pośredników Kredytowych KNF jako pośrednik kredytu konsumenckiego (nr RPK027234), działająca pod marką P&amp;T Money. Kontakt: <a href="mailto:biuro@ptmoney.pl">biuro@ptmoney.pl</a>.</p>
 <p><strong>Cele i podstawy.</strong> Imię, telefon oraz — jeśli je podasz — e-mail, kwotę i treść wiadomości przetwarzamy, aby obsłużyć zapytanie i skontaktować się z Tobą (art. 6 ust. 1 lit. b i f RODO), przekazać dane współpracującemu ekspertowi, pośrednikowi lub instytucji finansowej w celu przygotowania oferty (art. 6 ust. 1 lit. b RODO), prowadzić marketing własnych usług (art. 6 ust. 1 lit. f RODO) oraz ustalać i dochodzić roszczeń i spełniać obowiązki prawne (art. 6 ust. 1 lit. f i c RODO). Zgody zaznaczone dobrowolnie — art. 6 ust. 1 lit. a RODO.</p>
 <p><strong>Odbiorcy.</strong> Współpracujący eksperci i pośrednicy finansowi oraz instytucje finansowe (jako odrębni administratorzy), a także nasi dostawcy usług IT, hostingu, poczty i obsługi zgłoszeń oraz podmioty uprawnione na podstawie przepisów.</p>
 <p><strong>Okres.</strong> Do zakończenia obsługi zapytania, a zgłoszenia bez dalszej współpracy — 12 miesięcy od ostatniego kontaktu; dane przetwarzane na podstawie zgody — do jej wycofania.</p>
@@ -654,7 +654,7 @@ document.documentElement.classList.add('js');
 </div>
 <div class="footer-col"><h2>Produkty</h2><a href="./oferta.html">Kredyty</a><a href="./oferta.html#firma">Leasing i faktoring</a><a href="./oferta.html#oze">OZE — finansowanie systemów</a><a href="./oferta.html#ubezpieczenia">Ubezpieczenia</a></div>
 <div class="footer-col"><h2>Firma</h2><a href="#jak-to-dziala">Jak działamy</a><a href="#zespol">O nas</a><a href="./kalkulator.html">Kalkulator</a><a href="./kontakt.html">Kontakt</a></div>
-<div class="footer-col"><h2>Kontakt</h2><a class="contact-placeholder" data-contact-placeholder="true" href="tel:+48782972300">+48 782 972 300</a><a data-phone="secondary" href="tel:+48791739337">+48 791 739 337</a><a class="contact-placeholder" data-contact-placeholder="true" href="mailto:kontakt@ptmoney.pl">kontakt@ptmoney.pl</a><a href="https://ptmoney.pl/" id="stronaWww">ptmoney.pl</a></div>
+<div class="footer-col"><h2>Kontakt</h2><a class="contact-placeholder" data-contact-placeholder="true" href="tel:+48782972300">+48 782 972 300</a><a data-phone="secondary" href="tel:+48791739337">+48 791 739 337</a><a class="contact-placeholder" data-contact-placeholder="true" href="mailto:biuro@ptmoney.pl">biuro@ptmoney.pl</a><a href="https://ptmoney.pl/" id="stronaWww">ptmoney.pl</a></div>
 </div>
 <div aria-label="Dane rejestrowe" class="footer-registry"><span>Martom Polska Sp. z o.o.</span><span>NIP: 6342849173</span><span>KRS: 0000584084</span><span>Siedziba: ul. Walerego Sławka 5/16, 40-833 Katowice</span></div>
 <div class="footer-bottom">

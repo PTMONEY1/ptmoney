@@ -16,7 +16,7 @@ window.PTM_DANE = {
      wyświetlić. Link „zadzwoń" powstanie z niego automatycznie.              */
   telefon: '+48 782 972 300',       // główny numer telefonu
   telefon2: '+48 791 739 337',      // drugi numer telefonu
-  email: 'kontakt@ptmoney.pl',      // adres kontaktowy
+  email: 'biuro@ptmoney.pl',      // adres kontaktowy
 
   /* --- Dane rejestrowe (stopka + dokumenty prawne) ----------------------- */
   pelnaNazwa: 'MARTOM POLSKA Sp. z o.o.',   // spolka prowadzaca marke P&T Money

@@ -39,7 +39,7 @@ Dane rejestrowe są wpisane i rozchodzą się po całej stronie oraz po dokument
 | `adres` | ul. Walerego Sławka 5/16, 40-833 Katowice |
 | `nip` / `krs` | 6342849173 / 0000584084 (REGON 362876105 w komentarzu) |
 | `knf` | RPK027234 |
-| `telefon` / `email` | +48 782 972 300 / kontakt@ptmoney.pl |
+| `telefon` / `email` | +48 782 972 300 / biuro@ptmoney.pl |
 
 **Do sprawdzenia:** numery telefonu wziąłem z treści dokumentów prawnych, nie
 z ankiety — potwierdź, czy w nagłówku ma być `782 972 300`, czy drugi numer.
