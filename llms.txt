@@ -22,19 +22,19 @@ P&T Money opisuje i pośredniczy w procesach dotyczących kredytów konsumenckic
 ## Główne strony
 
 - https://ptmoney.pl/ — strona główna
-- https://ptmoney.pl/oferta/ — pełna oferta
-- https://ptmoney.pl/kalkulator/ — kalkulator refinansowania
-- https://ptmoney.pl/kontakt/ — kontakt
-- https://ptmoney.pl/informacja-o-posredniku/ — informacja prawna o pośredniku
+- https://ptmoney.pl/oferta.html — pełna oferta
+- https://ptmoney.pl/kalkulator.html — kalkulator refinansowania
+- https://ptmoney.pl/kontakt.html — kontakt
+- https://ptmoney.pl/informacja-o-posredniku.html — informacja prawna o pośredniku
 
 ## Strony lokalne
 
-- https://ptmoney.pl/finansowanie-rybnik/
-- https://ptmoney.pl/finansowanie-cieszyn/
-- https://ptmoney.pl/finansowanie-ruda-slaska/
-- https://ptmoney.pl/finansowanie-dabrowa-gornicza/
-- https://ptmoney.pl/finansowanie-bytom/
-- https://ptmoney.pl/finansowanie-zabrze/
+- https://ptmoney.pl/finansowanie-rybnik.html
+- https://ptmoney.pl/finansowanie-cieszyn.html
+- https://ptmoney.pl/finansowanie-ruda-slaska.html
+- https://ptmoney.pl/finansowanie-dabrowa-gornicza.html
+- https://ptmoney.pl/finansowanie-bytom.html
+- https://ptmoney.pl/finansowanie-zabrze.html
 
 ## Ważne zastrzeżenie
 

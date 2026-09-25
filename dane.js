@@ -116,7 +116,7 @@ window.PTM_DANE = {
   const base = set(D.adresStrony);
   if (base) {
     const root = base.endsWith('/') ? base : `${base}/`;
-    /* Adresy są czyste (/oferta/), więc bierzemy całą ścieżkę, a nie ostatni
+    /* Adresy są czyste (/oferta.html), więc bierzemy całą ścieżkę, a nie ostatni
        jej człon — ten przy adresie zakończonym ukośnikiem jest pusty i każda
        podstrona dostawała kanoniczny adres strony głównej. */
     const sciezka = window.location.pathname

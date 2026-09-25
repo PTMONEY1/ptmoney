@@ -1,0 +1,5 @@
+P&T Money — wersja płaska do hostingu.
+
+Wgraj ZAWARTOŚĆ tego katalogu bezpośrednio do katalogu public_html / głównego katalogu domeny.
+Nie twórz folderów dla podstron. index.html jest stroną startową.
+Podstrony: oferta.html, kontakt.html, kalkulator.html, finansowanie-*.html itd.
