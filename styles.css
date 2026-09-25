@@ -1868,3 +1868,56 @@ h2 { letter-spacing: -.042em; }
   #leadForm.is-sent .form-success { padding: 32px 20px; }
   .form-success-title { font-size: 1.15rem; }
 }
+
+
+/* ===== Lokalne strony usługowe / SEO 2026-09-25 =====
+   Linkowanie lokalne jest celowo dyskretne i siedzi w stopce, żeby nie
+   zmieniać hierarchii wizualnej głównej strony. */
+.footer-local {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 15px;
+  padding-block: 18px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  color: rgba(255,255,255,.38);
+  font-size: .72rem;
+  line-height: 1.55;
+}
+.footer-local strong {
+  margin-right: 4px;
+  color: rgba(255,255,255,.52);
+  font-weight: 600;
+}
+.footer-local a {
+  color: inherit;
+  text-decoration: none;
+  transition: color .18s var(--ease);
+}
+.footer-local a:hover { color: rgba(255,255,255,.82); }
+.local-note {
+  margin-top: 22px;
+  max-width: 74ch;
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.7;
+}
+.local-areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+.local-areas span {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .72rem;
+  background: #fff;
+}
+.local-faq .faq-list { max-width: 900px; margin-inline: auto; }
+.local-faq .section-head { max-width: 900px; margin-inline: auto; }
+@media (max-width: 720px) {
+  .footer-local { gap: 6px 12px; }
+  .footer-local strong { flex-basis: 100%; }
+}

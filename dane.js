@@ -156,14 +156,20 @@ window.PTM_DANE = {
   if (ld) {
     try {
       const data = JSON.parse(ld.textContent);
-      if (base) data.url = base;
-      if (set(D.pelnaNazwa)) data.legalName = set(D.pelnaNazwa);
-      if (telefon) data.telephone = telefon;
-      if (email) data.email = email;
-      if (set(D.nip)) data.taxID = set(D.nip); else delete data.taxID;
-      if (data.address) {
-        if (set(D.adres)) data.address.streetAddress = set(D.adres);
-        else delete data.address.streetAddress;
+      const graph = Array.isArray(data['@graph']) ? data['@graph'] : [data];
+      const org = graph.find(item => {
+        const types = Array.isArray(item?.['@type']) ? item['@type'] : [item?.['@type']];
+        return item?.['@id'] === 'https://ptmoney.pl/#organization' ||
+          types.includes('FinancialService') || types.includes('Organization');
+      }) || data;
+      if (base && org.url) org.url = base;
+      if (set(D.pelnaNazwa)) org.legalName = set(D.pelnaNazwa);
+      if (telefon) org.telephone = telefon;
+      if (email) org.email = email;
+      if (set(D.nip)) org.taxID = set(D.nip); else delete org.taxID;
+      if (org.address) {
+        if (set(D.adres)) org.address.streetAddress = set(D.adres);
+        else delete org.address.streetAddress;
       }
       ld.textContent = JSON.stringify(data, null, 2);
     } catch (e) { /* uszkodzony JSON-LD nie może wywrócić strony */ }

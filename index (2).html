@@ -1,100 +1,152 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Regulamin serwisu | P&amp;T Money</title>
-<meta name="description" content="Regulamin serwisu P&amp;T Money — zasady korzystania ze strony i formularza kontaktowego pośrednika kredytowego.">
-<meta name="robots" content="index,follow">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+<title>Kalkulator refinansowania kredytu hipotecznego — P&amp;T Money</title>
+<meta content="Porównaj obecny kredyt hipoteczny z nową ofertą i zobacz, ile oszczędzasz na odsetkach, kosztach oraz kiedy refinansowanie zaczyna się zwracać." name="description"/>
+<meta content="#FFFFFF" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="pl_PL" property="og:locale"/>
+<meta content="Kalkulator refinansowania kredytu hipotecznego — P&amp;T Money" property="og:title"/>
+<meta content="Porównaj obecny kredyt hipoteczny z nową ofertą i policz realną oszczędność po kosztach przeniesienia." property="og:description"/>
+<meta content="logo-horizontal.png" property="og:image"/>
 <!-- Czcionki z własnego serwera, nie z Google — patrz fonts.css -->
 <link rel="stylesheet" href="/fonts.css?v=1">
-<link rel="icon" type="image/png" sizes="128x128" href="/favicon.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="canonical" href="https://ptmoney.pl/regulamin/">
-<link rel="stylesheet" href="/styles.css?v=20260924-2">
+<link href="/kalkulator.css?v=20260916-1" rel="stylesheet"/>
 <link rel="stylesheet" href="/header-shared.css?v=20260924-2">
-<script defer src="/dane.js?v=20260924-3"></script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "P&T Money",
+    "url": "https://ptmoney.pl/",
+    "email": "biuro@ptmoney.pl",
+    "telephone": "+48 782 972 300",
+    "taxID": "6342849173",
+    "areaServed": {"@type": "Country", "name": "Polska"}
+  }
+  </script>
+<script defer="" src="/dane.js?v=20260924-3"></script>
+<link href="/favicon.png" rel="icon" sizes="128x128" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://ptmoney.pl/kalkulator/" rel="canonical"/>
 </head>
 <body>
-<header class="site-header"><div class="container header-inner"><a class="brand" href="/"><img src="/logo-horizontal.png" alt="P&amp;T Money" width="174" height="36"></a><a class="btn btn--primary btn--header" style="display:inline-flex" href="/kontakt/">Zostaw kontakt</a></div></header>
-<main class="legal-page"><div class="legal-wrap">
-<p class="eyebrow">Dokument</p>
-<h1>Regulamin serwisu</h1>
-<p class="legal-note">Ostatnia aktualizacja: 6 września 2026 r. Wersja 1.0. Dokument został uzupełniony danymi rejestrowymi spółki i oczekuje na weryfikację przez radcę prawnego. Nie stanowi porady prawnej.</p>
+<a class="skip-link" href="#calculatorMain">Przejdź do kalkulatora</a>
+<header class="pt-header" id="top">
+  <div class="pt-header__inner">
+    <a class="pt-header__brand" href="/" aria-label="P&amp;T Money — strona główna">
+      <img src="/logo-horizontal.png" alt="P&amp;T Money" width="174" height="36">
+    </a>
+    <nav class="pt-header__nav" aria-label="Główna nawigacja">
+      <a href="/">Start</a>
+      <a href="/oferta/">Oferta</a>
+      <a aria-current="page" href="/kalkulator/">Kalkulator</a>
+      <a href="/kontakt/">Kontakt</a>
+    </nav>
+    <div class="pt-header__actions">
+      <a class="pt-header__phone" href="tel:+48782972300" aria-label="Zadzwoń: +48 782 972 300">+48 782 972 300</a>
+      <a class="pt-header__phone pt-header__phone--person" data-phone="secondary" data-label="Paulina" href="tel:+48791739337" aria-label="Zadzwoń do Pauliny: +48 791 739 337">+48 791 739 337</a>
+      <a class="pt-header__cta" href="/kontakt/">Sprawdź możliwości</a>
+      <button class="pt-header__toggle" id="menuToggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="pt-header__mobile" id="mobileNav" aria-label="Nawigacja mobilna" hidden>
+    <div class="pt-header__mobile-inner">
+      <a href="/">Start</a>
+      <a href="/oferta/">Oferta</a>
+      <a aria-current="page" href="/kalkulator/">Kalkulator</a>
+      <a href="/kontakt/">Kontakt</a>
+      <div class="pt-header__mobile-phones">
+        <a class="pt-header__mobile-phone" data-label="Zadzwoń" href="tel:+48782972300">+48 782 972 300</a>
+        <a class="pt-header__mobile-phone" data-label="Paulina" data-phone="secondary" href="tel:+48791739337">+48 791 739 337</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div aria-label="Narzędzia kalkulatora" class="calc-toolbar">
+<div class="wrap topbar__inner">
+<div class="brand">
+<div aria-hidden="true" class="brand__mark"><img alt="" src="/logo-mark.png"/></div>
+<div><div class="brand__name">Refinansowanie hipoteki</div><div class="brand__sub">Kalkulator oszczędności na odsetkach</div></div>
+</div>
+<div class="topbar__actions">
 
-<h2>§ 1. Definicje</h2>
-<ol>
-<li><strong>Usługodawca / Operator</strong> – <strong>MARTOM POLSKA SP. Z O.O.</strong>, z siedzibą w Katowicach, ul. Walerego Sławka 5/16, 40-833 Katowice, KRS 0000584084, NIP 6342849173, REGON 362876105, wpisana do Rejestru Pośredników Kredytowych KNF – Dział II (pośrednik kredytu konsumenckiego), nr <strong>RPK027234</strong>, działająca pod marką P&amp;T Money.</li>
-<li><strong>Serwis</strong> – serwis internetowy dostępny pod adresem ptmoney.pl (oraz pod adresem publikacji serwisu).</li>
-<li><strong>Użytkownik</strong> – osoba korzystająca z Serwisu.</li>
-<li><strong>Formularz</strong> – formularz kontaktowy w Serwisie, umożliwiający przekazanie danych kontaktowych i zapytania o produkt finansowy.</li>
-<li><strong>Usługa</strong> – usługi świadczone drogą elektroniczną, o których mowa w § 3.</li>
-</ol>
-
-<h2>§ 2. Postanowienia ogólne</h2>
-<ol>
-<li>Regulamin określa zasady świadczenia usług drogą elektroniczną przez Operatora, zgodnie z ustawą z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną.</li>
-<li>Korzystanie z Serwisu jest nieodpłatne i dobrowolne.</li>
-<li>Operator działa jako pośrednik finansowy – kojarzy Użytkowników z bankami, instytucjami finansowymi oraz współpracującymi ekspertami i pośrednikami wyspecjalizowanymi w danych produktach. Operator nie jest bankiem ani instytucją pożyczkową i nie udziela finansowania.</li>
-<li>Wymagania techniczne: urządzenie z dostępem do internetu, aktualna przeglądarka z obsługą JavaScript, aktywny adres e-mail lub numer telefonu do kontaktu.</li>
-<li>Zakazane jest dostarczanie przez Użytkownika treści o charakterze bezprawnym oraz podawanie danych osób trzecich bez podstawy prawnej.</li>
-</ol>
-
-<h2>§ 3. Rodzaje i zakres usług</h2>
-<ol>
-<li>Operator świadczy nieodpłatnie: (a) udostępnianie treści informacyjnych o produktach finansowych; (b) kalkulator – narzędzie do orientacyjnego szacowania rat, którego wyniki mają charakter wyłącznie poglądowy; (c) formularz kontaktowy – umożliwiający przekazanie danych kontaktowych w celu kontaktu ze strony konsultanta.</li>
-<li>Umowa o świadczenie usługi drogą elektroniczną zostaje zawarta z chwilą rozpoczęcia korzystania z danej funkcji i rozwiązana z chwilą jej zaprzestania; w przypadku Formularza – z chwilą zakończenia obsługi zapytania.</li>
-</ol>
-
-<h2>§ 4. Charakter informacji i kalkulacji</h2>
-<ol>
-<li>Informacje, zestawienia i wyniki kalkulatora nie stanowią oferty w rozumieniu art. 66 Kodeksu cywilnego, porady inwestycyjnej ani zapewnienia o przyznaniu finansowania.</li>
-<li>Rzeczywiste warunki produktu (w tym RRSO, oprocentowanie, prowizje, całkowity koszt) ustala właściwa instytucja finansowa po analizie danych i dokumentów Użytkownika oraz ocenie zdolności kredytowej.</li>
-<li>Operator dokłada starań, aby informacje były aktualne i rzetelne, jednak nie gwarantuje ich kompletności ani ciągłej dostępności Serwisu.</li>
-</ol>
-
-<h2>§ 5. Formularz kontaktowy i dalszy kontakt</h2>
-<ol>
-<li>Wysłanie Formularza wymaga podania co najmniej imienia, numeru telefonu i wskazania produktu oraz zaznaczenia wymaganego oświadczenia dotyczącego danych osobowych.</li>
-<li>Wysłanie Formularza nie jest równoznaczne z zawarciem umowy o produkt finansowy ani z wydaniem decyzji kredytowej.</li>
-<li>Po otrzymaniu zgłoszenia konsultant Operatora kontaktuje się z Użytkownikiem. W zależności od potrzeb Użytkownika i udzielonych zgód dane kontaktowe mogą zostać przekazane współpracującemu ekspertowi, pośrednikowi lub instytucji finansowej w celu przedstawienia oferty. Zasady przetwarzania danych opisuje <a href="/polityka-prywatnosci/">Polityka prywatności</a>.</li>
-</ol>
-
-<h2>§ 6. Wynagrodzenie Operatora</h2>
-<ol>
-<li>Użytkownik nie ponosi wobec Operatora żadnych opłat za korzystanie z Serwisu ani za skojarzenie z instytucją finansową lub ekspertem.</li>
-<li>Operator otrzymuje wynagrodzenie (prowizję) od instytucji finansowych i partnerów, z którymi współpracuje; Korzystanie z Serwisu i z pośrednictwa Operatora jest dla Użytkownika bezpłatne — Operator nie pobiera od Użytkownika żadnych opłat ani prowizji.</li>
-<li>Operator jest wpisany do Rejestru Pośredników Kredytowych prowadzonego przez Komisję Nadzoru Finansowego – Dział II (pośrednik kredytu konsumenckiego), numer <strong>RPK027234</strong> (weryfikacja: <a href="https://rpkip.knf.gov.pl" rel="noopener" target="_blank">rpkip.knf.gov.pl</a>). Jako pośrednik kredytu konsumenckiego Operator przekazuje konsumentowi przed zawarciem umowy informacje wymagane ustawą z dnia 12 maja 2011 r. o kredycie konsumenckim (zob. „Informacja o pośredniku"). Operator współpracuje z wieloma kredytodawcami i instytucjami finansowymi i działa niezależnie — nie jest umocowany do działania wyłącznie na rzecz jednego kredytodawcy. Wynagrodzenie Operatora stanowi prowizja wypłacana przez kredytodawcę lub partnera po zawarciu umowy przez Użytkownika. Aktualną listę współpracujących instytucji Operator udostępnia na żądanie Użytkownika, na adres kontaktowy wskazany w §2.</li>
-<li>Operator nie jest wpisany do rejestru pośredników kredytu hipotecznego i nie posiada zezwolenia KNF w tym zakresie; zapytania dotyczące kredytu hipotecznego są wyłącznie przekazywane podmiotom uprawnionym.</li>
-</ol>
-
-<h2>§ 7. Reklamacje</h2>
-<ol>
-<li>Reklamacje dotyczące działania Serwisu lub usług świadczonych drogą elektroniczną można składać e-mailem na adres <a href="mailto:biuro@ptmoney.pl">biuro@ptmoney.pl</a> lub pisemnie na adres ul. Walerego Sławka 5/16, 40-833 Katowice.</li>
-<li>Reklamacja powinna zawierać dane kontaktowe składającego, opis zastrzeżeń i oczekiwane rozstrzygnięcie.</li>
-<li>Operator rozpatruje reklamację w terminie 30 dni od jej otrzymania i informuje o wyniku na podany adres. </li>
-<li>Konsument może skorzystać z pozasądowych sposobów rozpatrywania sporów, w tym z mediacji, sądu polubownego oraz platformy ODR: <a href="https://ec.europa.eu/consumers/odr" rel="noopener" target="_blank">ec.europa.eu/consumers/odr</a>. Użytkownikowi będącemu konsumentem przysługuje prawo wystąpienia do Rzecznika Finansowego (<a href="https://rf.gov.pl" rel="noopener">rf.gov.pl</a>) z wnioskiem o rozpatrzenie sprawy lub o przeprowadzenie pozasądowego postępowania w sprawie rozwiązywania sporów.</li>
-</ol>
-
-<h2>§ 8. Odpowiedzialność</h2>
-<ol>
-<li>Operator nie ponosi odpowiedzialności za decyzje instytucji finansowych ani za warunki produktów oferowanych przez podmioty trzecie.</li>
-<li>Operator nie odpowiada za przerwy w działaniu Serwisu wynikające z przyczyn niezależnych (siła wyższa, awarie dostawców, działania osób trzecich), z zastrzeżeniem bezwzględnie obowiązujących przepisów o ochronie konsumentów.</li>
-<li>Postanowienia ograniczające odpowiedzialność nie wyłączają ani nie ograniczają praw konsumenta wynikających z bezwzględnie obowiązujących przepisów.</li>
-</ol>
-
-<h2>§ 9. Prawa autorskie</h2>
-<p>Treści Serwisu (teksty, grafika, logotypy, układ) podlegają ochronie prawnej i należą do Operatora lub są wykorzystywane na podstawie stosownych uprawnień. Korzystanie z nich bez zgody Operatora, poza dozwolonym użytkiem, jest zabronione.</p>
-
-<h2>§ 10. Dane osobowe</h2>
-<p>Zasady przetwarzania danych osobowych określa <a href="/polityka-prywatnosci/">Polityka prywatności</a>, a zasady korzystania z cookies – <a href="/polityka-cookies/">Polityka cookies</a>.</p>
-
-<h2>§ 11. Postanowienia końcowe</h2>
-<ol>
-<li>Operator może zmienić Regulamin z ważnych przyczyn (zmiana przepisów, zakresu usług, wymogów technicznych). Zmieniony Regulamin publikowany jest w Serwisie z datą aktualizacji i obowiązuje od chwili publikacji, z poszanowaniem praw nabytych Użytkowników.</li>
-<li>W sprawach nieuregulowanych stosuje się prawo polskie, w szczególności Kodeks cywilny, ustawę o świadczeniu usług drogą elektroniczną oraz – wobec konsumentów – ustawę o prawach konsumenta.</li>
-<li>Regulamin obowiązuje od dnia 6 września 2026 r..</li>
-</ol>
-</div></main>
-<footer class="site-footer"><div class="container"><div class="footer-bottom"><p>© 2026 P&amp;T Money.</p><p><a href="/">Strona główna</a> · <a href="/polityka-prywatnosci/">Polityka prywatności</a> · <a href="/polityka-cookies/">Polityka cookies</a></p></div></div></footer>
-</body></html>
+<button class="btn btn--ghost" id="resetBtn" type="button">Wyczyść</button>
+<button class="btn btn--primary" id="printBtn" type="button">Pobierz PDF</button>
+</div>
+</div>
+</div>
+<main class="wrap" id="calculatorMain">
+<section class="hero">
+<span class="pill">Analiza porównawcza</span>
+<h1>Sprawdź, ile Twój klient <em>naprawdę</em> oszczędza</h1>
+<p>Wpisz warunki obecnego kredytu i parametry nowego wariantu. Wynik aktualizuje się na bieżąco, a jeśli chcesz przejść od symulacji do realnej analizy, nasz zespół porówna dostępne możliwości.</p>
+</section>
+<section aria-label="Dane wejściowe" class="grid-2">
+<article class="card card--current">
+<div class="card__head"><span class="dot dot--current"></span><h2>Obecny kredyt klienta</h2></div>
+<label class="field"><span class="field__lab">Bank / opis</span><input autocomplete="off" id="cName" placeholder="np. Obecny bank" type="text"/></label>
+<label class="field"><span class="field__lab">Pozostały kapitał do spłaty</span><div class="input-unit"><input id="cAmount" inputmode="numeric" min="0" step="1000" type="number" value="420000"/><span class="unit">zł</span></div></label>
+<div class="field"><span class="field__lab">Oprocentowanie <b class="val" id="cRateVal">7,45%</b></span><div class="input-unit"><input id="cRate" inputmode="decimal" max="25" min="0" step="0.01" type="number" value="7.45"/><span class="unit">%</span></div><input aria-label="Oprocentowanie obecne" class="slider" id="cRateS" max="15" min="0" step="0.05" type="range" value="7.45"/></div>
+<div class="field"><span class="field__lab">Pozostały okres <b class="val" id="cTermVal">25 lat</b></span><div class="row-2"><div class="input-unit"><input id="cYears" inputmode="numeric" max="40" min="0" step="1" type="number" value="25"/><span class="unit">lat</span></div><div class="input-unit"><input id="cMonths" inputmode="numeric" max="11" min="0" step="1" type="number" value="0"/><span class="unit">mies.</span></div></div><input aria-label="Okres obecny" class="slider" id="cYearsS" max="35" min="1" step="1" type="range" value="25"/></div>
+<div class="field"><span class="field__lab">Rodzaj rat</span><div aria-label="Rodzaj rat obecnego kredytu" class="seg" id="cType" role="group"><button class="seg__btn is-on" data-v="annuity" type="button">Równe</button><button class="seg__btn" data-v="decreasing" type="button">Malejące</button></div></div>
+<div class="mini"><span>Obecna rata</span><b id="cPayment">—</b></div>
+</article>
+<article class="card card--new">
+<div class="card__head"><span class="dot dot--new"></span><h2>Twoja oferta</h2></div>
+<label class="field"><span class="field__lab">Bank / opis</span><input autocomplete="off" id="nName" placeholder="np. Nowy bank" type="text"/></label>
+<div class="field"><span class="field__lab">Oprocentowanie <b class="val" id="nRateVal">5,89%</b></span><div class="input-unit"><input id="nRate" inputmode="decimal" max="25" min="0" step="0.01" type="number" value="5.89"/><span class="unit">%</span></div><input aria-label="Oprocentowanie nowe" class="slider" id="nRateS" max="15" min="0" step="0.05" type="range" value="5.89"/></div>
+<div class="field"><span class="field__lab">Okres kredytowania <b class="val" id="nTermVal">25 lat</b></span><div class="row-2"><div class="input-unit"><input id="nYears" inputmode="numeric" max="40" min="0" step="1" type="number" value="25"/><span class="unit">lat</span></div><div class="input-unit"><input id="nMonths" inputmode="numeric" max="11" min="0" step="1" type="number" value="0"/><span class="unit">mies.</span></div></div><input aria-label="Okres nowy" class="slider" id="nYearsS" max="35" min="1" step="1" type="range" value="25"/></div>
+<div class="field"><span class="field__lab">Rodzaj rat</span><div aria-label="Rodzaj rat nowego kredytu" class="seg" id="nType" role="group"><button class="seg__btn is-on" data-v="annuity" type="button">Równe</button><button class="seg__btn" data-v="decreasing" type="button">Malejące</button></div></div>
+<div class="costs"><div class="costs__head">Koszty przeniesienia kredytu</div><div class="row-2"><label class="field field--tight"><span class="field__lab">Prowizja nowego banku</span><div class="input-unit"><input id="nFeePct" inputmode="decimal" max="10" min="0" step="0.1" type="number" value="0"/><span class="unit">%</span></div></label><label class="field field--tight"><span class="field__lab">Opłata za wcześniejszą spłatę</span><div class="input-unit"><input id="cEarlyPct" inputmode="decimal" max="10" min="0" step="0.1" type="number" value="0"/><span class="unit">%</span></div></label></div><label class="field field--tight"><span class="field__lab">Pozostałe koszty (wycena, sąd, notariusz, PCC)</span><div class="input-unit"><input id="nOther" inputmode="numeric" min="0" step="100" type="number" value="1200"/><span class="unit">zł</span></div></label><label class="check"><input id="nCredited" type="checkbox"/><span>Dolicz prowizję do kwoty nowego kredytu</span></label></div>
+<div class="mini mini--new"><span>Nowa rata</span><b id="nPayment">—</b></div>
+</article>
+</section>
+<section aria-label="Wyniki" class="results">
+<div class="headline" id="headline"><div class="headline__lab">Oszczędność na odsetkach</div><div class="headline__big" id="hSavings">—</div><div class="headline__sub" id="hSub">Uzupełnij dane, aby zobaczyć wynik</div><div class="headline__bars"><div class="hbar"><div class="hbar__lab"><span>Odsetki dziś</span><b id="hIntA">—</b></div><div class="hbar__track"><i class="hbar__fill hbar__fill--a" id="hFillA"></i></div></div><div class="hbar"><div class="hbar__lab"><span>Odsetki po zmianie</span><b id="hIntB">—</b></div><div class="hbar__track"><i class="hbar__fill hbar__fill--b" id="hFillB"></i></div></div></div></div>
+<div class="kpis"><div class="kpi"><div class="kpi__lab">Rata miesięczna</div><div class="kpi__val" id="kPay">—</div><div class="kpi__note" id="kPayNote">—</div></div><div class="kpi"><div class="kpi__lab">Oszczędność netto <span class="hint" title="Oszczędność na odsetkach pomniejszona o koszty przeniesienia kredytu">?</span></div><div class="kpi__val" id="kNet">—</div><div class="kpi__note" id="kNetNote">—</div></div><div class="kpi"><div class="kpi__lab">Koszty przeniesienia</div><div class="kpi__val" id="kCost">—</div><div class="kpi__note" id="kCostNote">—</div></div><div class="kpi"><div class="kpi__lab">Zwrot kosztów po</div><div class="kpi__val" id="kBE">—</div><div class="kpi__note" id="kBENote">—</div></div></div>
+</section>
+<section class="card card--wide"><div class="card__head card__head--row"><h2>Przebieg spłaty</h2><div aria-label="Tryb wykresu" class="seg seg--sm" id="chartMode" role="group"><button class="seg__btn is-on" data-v="balance" type="button">Saldo zadłużenia</button><button class="seg__btn" data-v="interest" type="button">Odsetki narastająco</button></div></div><div class="legend"><span><i class="lg lg--a"></i><span id="legA">Obecny kredyt</span></span><span><i class="lg lg--b"></i><span id="legB">Twoja oferta</span></span></div><div class="chart-box"><svg aria-label="Wykres porównawczy" id="chart" preserveaspectratio="none" role="img" viewbox="0 0 900 340"></svg><div class="tip" hidden="" id="tip"></div></div></section>
+<section class="card card--wide bonus" hidden="" id="bonus"><div aria-hidden="true" class="bonus__ico"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"></path></svg></div><div class="bonus__body"><h3>Wariant dla ambitnych: zostaw ratę na obecnym poziomie</h3><p id="bonusTxt">—</p></div></section>
+<section class="card card--wide"><div class="card__head"><h2>Zestawienie szczegółowe</h2></div><div class="table-scroll"><table class="cmp"><thead><tr><th>Parametr</th><th id="thA">Obecny kredyt</th><th id="thB">Twoja oferta</th><th>Różnica</th></tr></thead><tbody id="cmpBody"></tbody></table></div></section>
+<section class="card card--wide"><div class="card__head card__head--row"><h2>Harmonogram spłaty</h2><div aria-label="Harmonogram kredytu" class="seg seg--sm" id="schedMode" role="group"><button class="seg__btn is-on" data-v="B" type="button">Twoja oferta</button><button class="seg__btn" data-v="A" type="button">Obecny kredyt</button></div></div><div class="table-scroll table-scroll--tall"><table class="sched"><thead><tr><th>Rata</th><th>Kwota raty</th><th>Kapitał</th><th>Odsetki</th><th>Saldo po spłacie</th></tr></thead><tbody id="schedBody"></tbody></table></div><div class="more"><button class="btn btn--ghost" id="moreBtn" type="button">Pokaż kolejne 60 rat</button><span class="more__info" id="moreInfo"></span></div></section>
+<footer class="foot calc-print-foot"><div class="foot__adv"><label class="field field--tight"><span class="field__lab">Zespół</span><input aria-label="Zespół P&amp;T Money" autocomplete="off" id="advName" type="text" value="P&amp;T Money"/></label><label class="field field--tight"><span class="field__lab">Kontakt</span><input autocomplete="off" id="advContact" placeholder="telefon / e-mail" type="text"/></label></div><p class="disclaimer">Kalkulacja ma charakter poglądowy i nie stanowi oferty w rozumieniu art. 66 §1 Kodeksu cywilnego. Wyliczenia zakładają stałą stopę procentową przez cały okres kredytowania oraz spłatę rat w terminie; rzeczywiste koszty mogą się różnić i zależą od decyzji banku, ubezpieczeń i marż. Kredyt oparty o zmienną stopę procentową wiąże się z ryzykiem wzrostu raty.</p></footer>
+</main>
+<section aria-labelledby="calcCtaTitle" class="calc-cta"><div class="site-container calc-cta-inner"><div><p class="site-eyebrow">P&amp;T Money</p><h2 id="calcCtaTitle">Chcesz sprawdzić, czy to się opłaca w Twoim przypadku?</h2></div><a class="site-btn site-btn--primary" href="/kontakt/">Zostaw kontakt</a></div></section>
+<footer class="site-footer">
+<div class="site-container">
+<div class="footer-grid">
+<div class="footer-brand"><a aria-label="P&amp;T Money — strona główna" class="footer-logo" href="/"><img alt="" height="42" src="/logo-mark.png" width="46"/><span>P&amp;T <strong>money</strong></span></a><p>Niezależne pośrednictwo finansowe. Porównujemy oferty banków, firm leasingowych i faktoringowych oraz towarzystw ubezpieczeniowych, żebyś nie musiał robić tego sam.</p></div>
+<div class="footer-col"><h2>Oferta</h2><a href="/oferta/#klienci">Kredyty</a><a href="/oferta/#firma">Leasing i faktoring</a><a href="/oferta/#oze">OZE — finansowanie systemów</a><a href="/oferta/#ubezpieczenia">Ubezpieczenia</a></div>
+<div class="footer-col"><h2>Firma</h2><a href="/#jak-to-dziala">Jak działamy</a><a href="/#faq">FAQ</a><a href="/kontakt/">Kontakt</a></div>
+<div class="footer-col"><h2>Kontakt</h2><a href="tel:+48782972300">+48 782 972 300</a><a data-phone="secondary" href="tel:+48791739337">+48 791 739 337</a><a href="mailto:biuro@ptmoney.pl">biuro@ptmoney.pl</a><span>NIP: 6342849173</span></div>
+</div>
+<div aria-label="Dane rejestrowe" class="footer-registry"><span>Martom Polska Sp. z o.o.</span><span>NIP: 6342849173</span><span>KRS: 0000584084</span><span>Siedziba: ul. Walerego Sławka 5/16, 40-833 Katowice</span></div>
+<nav class="footer-local" aria-label="Obsługiwane miasta">
+<strong>Obsługujemy także:</strong><a href="/finansowanie-rybnik/">Rybnik</a><a href="/finansowanie-cieszyn/">Cieszyn</a><a href="/finansowanie-ruda-slaska/">Ruda Śląska</a><a href="/finansowanie-dabrowa-gornicza/">Dąbrowa Górnicza</a><a href="/finansowanie-bytom/">Bytom</a><a href="/finansowanie-zabrze/">Zabrze</a><a href="/kontakt/">cała Polska</a>
+</nav>
+<div class="footer-bottom"><p>© 2026 P&amp;T Money. Wszelkie prawa zastrzeżone.</p><p><a href="/polityka-prywatnosci/">Polityka prywatności</a> · <a href="/polityka-cookies/">Polityka cookies</a> · <a href="/regulamin/">Regulamin</a> · <a href="/informacja-o-posredniku/">Informacja o pośredniku</a></p></div>
+<p class="footer-disclaimer">P&amp;T Money to marka MARTOM POLSKA Sp. z o.o., pośrednika kredytu konsumenckiego wpisanego do rejestru KNF pod numerem RPK027234. Spółka nie jest bankiem ani instytucją pożyczkową i nie udziela finansowania we własnym imieniu. Spółka nie jest wpisana do rejestru pośredników kredytu hipotecznego — zapytania o kredyt hipoteczny przekazujemy podmiotom posiadającym stosowne uprawnienia. Prezentowane kalkulacje mają charakter wyłącznie poglądowy i edukacyjny, nie stanowią oferty w rozumieniu art. 66 Kodeksu cywilnego ani rekomendacji inwestycyjnej. Ostateczne warunki finansowania, w tym RRSO, zależą od indywidualnej oceny zdolności kredytowej dokonanej przez wybraną instytucję finansową.</p>
+</div>
+</footer>
+<div class="mobile-bottom-bar"><a class="site-btn site-btn--ghost" href="tel:+48782972300">Zadzwoń</a><a class="site-btn site-btn--primary" href="/kontakt/">Zostaw kontakt</a></div>
+<script>
+    (() => {
+      const btn = document.getElementById('menuToggle');
+      const nav = document.getElementById('mobileNav');
+      if (!btn || !nav) return;
+      const close = () => { btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-label','Otwórz menu'); nav.hidden = true; document.body.classList.remove('menu-open'); };
+      btn.addEventListener('click', () => { const open = btn.getAttribute('aria-expanded') === 'true'; btn.setAttribute('aria-expanded', String(!open)); btn.setAttribute('aria-label', open ? 'Otwórz menu' : 'Zamknij menu'); nav.hidden = open; document.body.classList.toggle('menu-open', !open); });
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+      window.addEventListener('resize', () => { if (innerWidth >= 900) close(); }, { passive:true });
+    })();
+  </script>
+<script src="/kalkulator.js?v=20260831-1"></script>
+</body>
+</html>

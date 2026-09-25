@@ -1,3 +1,9 @@
+# P&T Money — robots.txt
 User-agent: *
 Allow: /
+
+# OpenAI search crawler — enables pages to be surfaced in ChatGPT Search.
+User-agent: OAI-SearchBot
+Allow: /
+
 Sitemap: https://ptmoney.pl/sitemap.xml
